@@ -1,0 +1,326 @@
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+} /* Add styles for smaller screens */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #374c5a;
+  position: relative;
+}
+
+.split.left {
+  background-image: url("../src/assets/coding.jpg");
+  height: 100vh;
+  width: 50vw;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.split.right {
+  background-color: blueviolet;
+  background-image: url("../src/assets/video.jpg");
+  height: 100vh;
+  width: 50vw;
+  right: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+.split.left:hover {
+  opacity: 1;
+}
+
+.split.right:hover {
+  opacity: 1;
+}
+
+:root {
+  --hover-width: 75%;
+  --other-width: 25%;
+  --speed: 1000ms;
+}
+
+.container.hover-left .left {
+  width: var(--hover-width);
+}
+
+.container.hover-left .right {
+  width: var(--other-width);
+}
+
+.container.hover-right .right {
+  width: var(--hover-width);
+}
+
+.container.hover-right .left {
+  width: var(--other-width);
+}
+
+.container.hover-left .left,
+.container.hover-right .right,
+.container.hover-right .left,
+.container.hover-left .right {
+  transition: all 0.9s ease-in-out;
+}
+
+.h1-left {
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.h1-right {
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btn-right {
+  background-color: transparent;
+  font-size: 25px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 500px;
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  opacity: 0%;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-right:hover {
+  background-color: aliceblue;
+  opacity: 100%;
+  color: rgb(0, 0, 0);
+}
+
+.btn-left {
+  font-size: 25px;
+  font-weight: bold;
+  background-color: transparent;
+  color: white;
+  border: none;
+  position: absolute;
+  top: 50%;
+  left: 1400px;
+  border-radius: 10px;
+  padding: 20px;
+  opacity: 0%;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  animation: colorChange 5s linear infinite;
+  cursor: pointer;
+}
+
+.btn-left:hover {
+  background-color: white;
+  opacity: 100%;
+  color: rgb(0, 0, 0);
+}
+.btn-left::before,
+.btn-left::after,
+.btn-right::before,
+.btn-right::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  transform: skew(15deg);
+
+  transition: all 0.5s;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.btn-left::before,
+.btn-right::before {
+  left: -10px;
+  background: #09a0ce;
+}
+
+.btn-left::after,
+.btn-right::after {
+  right: -10px;
+  background: #054396;
+}
+
+.btn-left:hover::before,
+.btn-left:hover::after,
+.btn-right:hover::before,
+.btn-right:hover::after {
+  width: 58%;
+}
+
+.btn-left span,
+.btn-right span {
+  color: #03045e;
+  font-size: 18px;
+  transition: all 0.3s ease-in;
+}
+
+.btn-left:hover span,
+.btn-right:hover span {
+  color: #e0aaff;
+  transition: 0.3s;
+}
+
+.btn-visible {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+.btn-visible {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+/* styles for the dark mode */
+.dark-mode-button {
+  position: absolute;
+  top: 55%;
+  font-size: 1rem;
+  background-color: #09578b;
+  color: #fff;
+  border: none;
+  rotate: calc(90deg);
+  margin-left: -50px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  position: fixed;
+  opacity: 0.7; /* Set initial opacity to 0.2 (20%) */
+  transition: opacity 0.5s, transform 0.5s; /* Add transitions for opacity and transform */
+}
+.dark-mode-button:hover {
+  opacity: 1; /* Increase opacity to 1 (100%) on hover */
+  transform: scale(1); /* No need to change the scale property */
+}
+
+.switch {
+  opacity: 0;
+  display: flex;
+  align-items: center;
+}
+
+.dark-mode {
+  background: linear-gradient(90deg, #aee2fa, #4e56c7);
+  color: #020202;
+  /* Add other styles for dark mode here */
+}
+
+/* styles for the light mode */
+.light-mode {
+  background: linear-gradient(90deg, #aee2fa, #030522);
+  color: #ffffff;
+  /* Add other styles for light mode here */
+}
+/* Add styles for screens between 320px and 480px */
+@media (min-width: 320px) and (max-width: 480px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrolling */
+  }
+  .split.left,
+  .split.right {
+    width: 150%; /* Adjust the width as needed */
+    height: 50%;
+  }
+  .btn-right.btn-visible {
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    width: auto;
+  }
+
+  .btn-left.btn-visible {
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    width: auto;
+  }
+  .h1-right,
+  .h1-left {
+    font-size: 13px;
+  }
+}
+
+/* Add styles for screens between 480px and 767px */
+@media (min-width: 480px) and (max-width: 767px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrolling */
+  }
+  .split.left,
+  .split.right {
+    width: 160%; /* Adjust the width as needed */
+    height: 100%;
+  }
+  .btn-right.btn-visible,
+  .btn-left.btn-visible {
+    height: auto;
+    position: static;
+    width: auto;
+  }
+  .h1-right,
+  .h1-left {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1370px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrolling */
+  }
+  .split.left,
+  .split.right {
+    width: 160%; /* Adjust the width as needed */
+    height: 100%;
+  }
+  .btn-right.btn-visible,
+  .btn-left.btn-visible {
+    height: auto;
+    position: static;
+    width: auto;
+  }
+  .h1-right,
+  .h1-left {
+    font-size: 13px;
+  }
+}

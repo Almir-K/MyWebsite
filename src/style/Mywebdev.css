@@ -1,0 +1,585 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Poppins:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100&display=swap");
+
+body {
+  /* background-image: linear-gradient(90deg, #aee2fa, #5861e2); */
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-content: space-between; /* Adjust the alignment */
+  margin-left: 200px;
+}
+
+.project-box {
+  position: relative;
+  width: 220px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  height: 320px;
+  background: rgb(61, 180, 235);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center both horizontally and vertically */
+  text-align: center;
+  margin-bottom: 70px;
+  align-items: center;
+  text-align: center;
+  margin: 20px;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  transition: background-color 0.3s ease-in-out;
+  width: 200px; /* To occupy the full width of the grid cell */
+  height: 200px; /* To occupy the full height of the grid cell */
+  background-size: cover;
+  background-position: center center; /* Center the background image */
+  background-repeat: no-repeat;
+  opacity: 70%;
+  /* Add a grey area at the bottom with a title */
+  &::before {
+    opacity: 98%;
+    border-radius: 4px;
+    content: attr(data-title); /* Use the "data-title" attribute as content */
+    background: rgba(0, 0, 0, 0.8); /* Grey background color */
+    color: white; /* Text color */
+    font-size: 16px; /* Font size for the title */
+    padding: 10px; /* Spacing around the title */
+  }
+}
+
+.project-box::after,
+.project-box::before {
+  position: absolute;
+
+  content: "";
+  width: 30%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #aee2fa, #5861e2);
+  transition: all 0.5s;
+}
+.project-box::before {
+  top: -1px;
+  right: 0;
+  border-radius: 0 15px 0 100%;
+}
+
+.project-box::after {
+  bottom: 0;
+  left: 0;
+  border-radius: 10px 100% 0 15px;
+}
+
+.project-box:hover::before,
+.project-box:hover:after {
+  width: 90%;
+  height: 90%;
+  border-radius: 15px;
+  transition: all 0.5s;
+}
+
+.project-title {
+  position: absolute;
+  top: 50%;
+
+  background: transparent;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-weight: bold;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: none; /* Initially hide the title */
+}
+
+.project-box:hover .project-title {
+  display: block; /* Show the title when hovering over the project box */
+  z-index: 10;
+}
+
+/* //navbar// */
+.navbar {
+  display: flex; /* Enable flex layout to arrange items horizontally */
+  justify-content: space-between; /* Spread items horizontally */
+  align-items: center; /* Vertically center items */
+  flex-direction: row-reverse;
+}
+
+.navbar-item {
+  display: inline-block;
+  flex-direction: row-reverse;
+  padding: 15px 24px;
+  border: none;
+  margin-right: 50px; /* Add margin to create a gap between the buttons */
+  border-radius: 4px;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  font-size: 19px;
+  color: black;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.01) 0px 15px 25px,
+    rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+a {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar-item::before {
+  content: "";
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.navbar-item::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #09a0ce;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.navbar-item:hover {
+  color: #ffffff;
+}
+
+.navbar-item:hover::before {
+  top: -35%;
+  background-color: #054396;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.navbar-item:hover::after {
+  top: -45%;
+  background-color: #5861e2;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.about-me {
+  font-weight: bold;
+  text-align: center;
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 10px;
+  margin-left: 100px;
+  width: 80%;
+  max-width: 900px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+  opacity: 80%;
+  transition: all 0.5s ease;
+  transform: scale(0.7); /* Start with a smaller size */
+}
+
+.about-me:hover {
+  opacity: 100%;
+  transform: scale(1); /* Return to the original size on hover */
+}
+
+.about-me p {
+  margin: 35px 0; /* Add margin at the top and bottom of each paragraph */
+  line-height: 1.8; /* Adjust the line height for better readability */
+}
+
+.about-me h2 {
+  margin-bottom: 30px; /* Add margin below the heading for extra spacing */
+}
+
+.Hi {
+  font-size: 25px;
+  position: absolute;
+  top: -1%;
+  left: 1%;
+}
+
+.My-projects {
+  background: transparent;
+  padding: 20px;
+  margin-top: 80px;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style for chips and descriptions */
+/* Rest of your CSS */
+
+.chips-container {
+  position: absolute;
+  left: 70%;
+  top: 10%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 50px;
+}
+
+.chip {
+  cursor: pointer;
+  animation: floatBubble 10s ease-in-out infinite,
+    fadeInOut 10s ease-in-out infinite;
+  opacity: 0; /* Start with opacity 0 */
+  border-radius: 50%;
+  text-align: center;
+  line-height: 90px; /* Center text vertically */
+}
+
+.chip.html {
+  background-color: transparent;
+  color: rgb(192, 115, 115);
+  padding: 8px 16px;
+  font-size: 25px;
+  position: absolute;
+  left: -20%;
+  top: -10%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: floatBubble 10s ease-in-out infinite,
+    fadeInOut 10s ease-in-out infinite;
+}
+
+.chip.css {
+  background-color: transparent;
+  color: rgb(4, 81, 248);
+  padding: 12px 24px;
+  font-size: 25px;
+  position: relative;
+  left: -300%;
+  top: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: floatBubble 9s ease-in-out infinite,
+    fadeInOut 7s ease-in-out infinite;
+}
+
+.chip.js {
+  background-color: transparent;
+  color: rgb(198, 231, 8);
+  padding: 10px 20px;
+  font-size: 25px;
+  position: absolute;
+  left: -60%;
+  top: 250%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: floatBubble9s 11sease-in-out infinite,
+    fadeInOut 9s ease-in-out infinite;
+}
+
+.chip.react {
+  background-color: transparent;
+  color: rgb(231, 117, 24);
+  padding: 10px 22px;
+  font-size: 45px;
+  position: absolute;
+  left: 50%;
+  top: 200%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: floatBubble 10s ease-in-out infinite,
+    fadeInOut 10s ease-in-out infinite;
+}
+
+.chip.node {
+  background-color: transparent;
+  color: rgb(209, 222, 228);
+  padding: 15px 30px;
+  font-size: 35px;
+  position: absolute;
+  left: -80%;
+  top: 40%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: floatBubble 10s ease-in-out infinite,
+    fadeInOut 10s ease-in-out infinite;
+}
+
+.chip.api {
+  background-color: transparent;
+  color: rgb(230, 123, 240);
+  padding: 16px 32px;
+  font-size: 26px;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: floatBubble 9s ease-in-out infinite,
+    fadeInOut 8s ease-in-out infinite;
+}
+
+.chip.material-ui {
+  background-color: transparent;
+  color: rgb(147, 185, 163);
+  padding: 12px 24px;
+  font-size: 25px;
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  animation: floatBubble 10s ease-in-out infinite,
+    fadeInOut 9s ease-in-out infinite;
+}
+
+@keyframes floatBubble {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.chip:hover {
+  transform: scale(1); /* Scale the chip on hover for a popping effect */
+  animation: pop 0.5s ease-in-out; /* Apply the "pop" animation on hover */
+  opacity: 1; /* Make the chip fully visible on hover */
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(2);
+  }
+  50% {
+    transform: scale(1.3); /* Scale up the chip */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pic-container {
+  opacity: 80%;
+  position: absolute;
+  top: 30%;
+  left: 65%;
+}
+/* Styles for the picture */
+.pic {
+  width: 300px; /* Adjust the width and height as needed */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 10%;
+  transition: filter 0.5s ease, transform 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+.pic-container:hover .info {
+  bottom: 0; /* Move it up */
+  opacity: 1; /* Show the information */
+}
+
+.pic-container:hover .pic {
+  filter: grayscale(100%); /* Make it grayscale on hover */
+  transform: scale(1.3); /* Enlarge the image on hover */
+}
+
+/* Styles for the picture */
+.pic {
+  align-items: center; /* This property should be applied to the parent container, not the image itself */
+}
+
+.social-media-bar {
+  position: fixed;
+  top: 35%;
+  left: 0%;
+  opacity: 0.2; /* Set initial opacity to 0.2 (20%) */
+  transition: opacity 0.5s, transform 0.5s; /* Add transitions for opacity and transform */
+}
+
+.social-media-bar:hover {
+  opacity: 1; /* Increase opacity to 1 (100%) on hover */
+  transform: scale(1); /* No need to change the scale property */
+}
+
+/* Add these styles to your CSS */
+.footer {
+  padding: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: transparent;
+  top: 200%;
+  left: 0;
+  width: 100%;
+}
+
+.person-info {
+  font-family: "M PLUS 1p";
+  font-size: 25px;
+  text-decoration: wavy;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content in the column */
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+}
+
+.phone,
+.email,
+.place {
+  font-size: 20px;
+  margin: 5px 0;
+  text-align: end; /* Add space between each piece of contact information */
+}
+
+.contact-info h3,
+.social-media h3 {
+  font-size: 20px;
+  margin-bottom: 10px; /* Add spacing below the "Follow Me" text */
+}
+
+.social-links {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-right: 100px;
+}
+
+.social-links li {
+  margin-bottom: 10px;
+  margin-left: 10px; /* Add spacing between each social link */
+}
+
+.social-links a {
+  text-decoration: none;
+}
+
+.social-links a img {
+  width: 50px;
+  height: 30px;
+}
+@media screen and (min-width: 360px) and (max-width: 1050px) {
+  /* Apply styles for screens between 380px and 1050px */
+
+  .navbar {
+    flex-direction: column; /* Stack the navigation items vertically */
+    text-align: center; /* Center-align the navigation items */
+    margin-bottom: 20px; /* Add space between the navigation and the content */
+  }
+
+  .navbar-item {
+    margin: 10px 0; /* Add spacing between each navigation item */
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr; /* Display projects in a single column */
+    margin-left: 0; /* Remove left margin */
+  }
+
+  .project-box {
+    margin: 10px; /* Add spacing between each project box */
+    width: 100%; /* Take up the full width of the container */
+  }
+
+  .about-me {
+    margin: 0; /* Reset margin to take full width */
+    max-width: 100%; /* Take up the full width of the container */
+  }
+
+  .chips-container {
+    left: 0; /* Reset the position to the left */
+  }
+
+  .chip {
+    position: relative; /* Reset the chip positions */
+    left: 0; /* Reset the left position */
+    top: 0; /* Reset the top position */
+  }
+
+  .pic-container {
+    position: static; /* Reset the position to static */
+    text-align: center; /* Center-align the picture */
+  }
+
+  .social-media-bar {
+    position: static; /* Reset the position to static */
+    text-align: center; /* Center-align the social media bar */
+  }
+
+  .footer {
+    position: relative;
+    left: -12%;
+    flex-direction: column; /* Stack the footer content vertically */
+  }
+
+  .contact-info {
+    text-align: center; /* Center-align the contact info */
+  }
+
+  .social-links {
+    justify-content: center; /* Center-align the social links */
+    margin-right: 0; /* Reset margin-right */
+  }
+}
