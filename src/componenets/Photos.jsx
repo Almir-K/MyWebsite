@@ -16,17 +16,17 @@ const Photo = () => {
   };
 
   const imageData = [
-    "../src/VideoPhotos/2lambo.jpg",
-    "../src/VideoPhotos/ferrari.jpg",
-    "../src/VideoPhotos/Hyndai.png",
-    "../src/VideoPhotos/lambo.jpg",
-    "../src/VideoPhotos/lambo2.jpg",
-    "../src/VideoPhotos/mclaren.jpg",
-    "../src/VideoPhotos/porshe.jpg",
-    "../src/VideoPhotos/rs7.jpg",
-    "../src/VideoPhotos/Mercedes.jpg",
+    "./VideoPhotos/2lambo.jpg",
+    "./VideoPhotos/ferrari.jpg",
+    "./VideoPhotos/Hyndai.png",
+    "./VideoPhotos/lambo.jpg",
+    "./VideoPhotos/lambo2.jpg",
+    "./VideoPhotos/mclaren.jpg",
+    "./VideoPhotos/porshe.jpg",
+    "./VideoPhotos/rs7.jpg",
+    "./VideoPhotos/Mercedes.jpg",
 
-    "../src/VideoPhotos/lambo1.jpg",
+    "./VideoPhotos/lambo1.jpg",
   ];
 
   const renderImages = imageData.map((image, index) => (
@@ -40,21 +40,21 @@ const Photo = () => {
   ));
 
   const weddingImages = [
-    "../src/VideoPhotos/PIC04479.jpg",
-    "../src/VideoPhotos/PIC03722.jpg",
-    "../src/VideoPhotos/PIC03491.jpg",
-    "../src/VideoPhotos/PIC03101.jpg",
-    "../src/VideoPhotos/PIC04605.jpg",
-    "../src/VideoPhotos/PIC05418.jpg",
-    "../src/VideoPhotos/PIC05386.jpg",
-    "../src/VideoPhotos/PIC05261.jpg",
-    "../src/VideoPhotos/PIC05297.jpg",
-    "../src/VideoPhotos/PIC05326.jpg",
-    "../src/VideoPhotos/DSC00490.jpg",
-    "../src/VideoPhotos/DSC00769.jpg",
-    "../src/VideoPhotos/DSC02371.jpg",
-    "../src/VideoPhotos/DSC02377.jpg",
-    "../src/VideoPhotos/PIC05195.jpg",
+    "./VideoPhotos/PIC04479.jpg",
+    "./VideoPhotos/PIC03722.jpg",
+    "./VideoPhotos/PIC03491.jpg",
+    "./VideoPhotos/PIC03101.jpg",
+    "./VideoPhotos/PIC04605.jpg",
+    "./VideoPhotos/PIC05418.jpg",
+    "./VideoPhotos/PIC05386.jpg",
+    "./VideoPhotos/PIC05261.jpg",
+    "./VideoPhotos/PIC05297.jpg",
+    "./VideoPhotos/PIC05326.jpg",
+    "./VideoPhotos/DSC00490.jpg",
+    "./VideoPhotos/DSC00769.jpg",
+    "./VideoPhotos/DSC02371.jpg",
+    "./VideoPhotos/DSC02377.jpg",
+    "./VideoPhotos/PIC05195.jpg",
   ];
 
   const renderWeddingImages = weddingImages.map((image, index) => (

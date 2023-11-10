@@ -78,49 +78,49 @@ const Myvideo = () => {
           <div className="photos">
             <div className="photo-container">
               <img
-                src="../src/VideoPhotos/ferrari.jpg"
+                src="./VideoPhotos/ferrari.jpg"
                 alt="Video 5"
                 className="normal-image"
               />
             </div>
             <div className="photo-container">
               <img
-                src="../src/VideoPhotos/layla.jpg"
+                src="./VideoPhotos/layla.jpg"
                 alt="Photo 1"
                 className="wide-image"
               />
             </div>
             <div className="photo-container">
               <img
-                src="../src/VideoPhotos/PIC03491.jpg"
+                src="./VideoPhotos/PIC03491.jpg"
                 alt="Video 2"
                 className="normal-image"
               />
             </div>{" "}
             <div className="photo-container">
               <img
-                src="../src/VideoPhotos/2lambo.jpg"
+                src="./VideoPhotos/2lambo.jpg"
                 alt="Video 6"
                 className="normal-image"
               />
             </div>
             <div className="photo-container">
               <img
-                src="../src/VideoPhotos/hyndai.png"
+                src="./VideoPhotos/hyndai.png"
                 alt="Video 3"
                 className="normal-image"
               />
             </div>{" "}
             <div className="photo-container">
               <img
-                src="../src/VideoPhotos/lambo1.jpg"
+                src="./VideoPhotos/lambo1.jpg"
                 alt="Video 7"
                 className="normal-image"
               />
             </div>
             <div className="photo-container">
               <img
-                src="../src/VideoPhotos/almir.jpg"
+                src="./VideoPhotos/almir.jpg"
                 alt="Video 4"
                 className="normal-image"
               />

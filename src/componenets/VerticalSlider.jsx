@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import "../style/Myvideo.css";
-import rs7 from "../VideoPhotos/rs7.jpg";
-import Hyndai from "../VideoPhotos/Hyndai.png";
-import Merca from "../VideoPhotos/Mercedes.jpg";
-import lambo from "../VideoPhotos/2lambo.jpg";
+import rs7 from "/VideoPhotos/rs7.jpg";
+import Hyndai from "/VideoPhotos/Hyndai.png";
+import Merca from "/VideoPhotos/Mercedes.jpg";
+import lambo from "/VideoPhotos/2lambo.jpg";
 import sony from "../assets/sony.png";
 import ronin from "../assets/ronin.png";
 
