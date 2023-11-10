@@ -20,7 +20,6 @@ import Movie from "../assets/movieapp.png";
 import clock from "../assets/clock.png";
 import input from "../assets/input.png";
 import keycode from "../assets/keycode.png";
-import { Link } from "react-scroll"; // Import Link from react-scroll
 import ContactMe from "./ContactMe";
 import DarkModeToggle from "./DarkModeToggle";
 
@@ -157,26 +156,6 @@ const Navbar = () => (
   <nav className="navbar">
     <ul className="navbar-list">
       <li className="navbar-item">
-        <Link
-          to="contact-me"
-          smooth={true}
-          duration={800}
-          style={{ color: "white" }}
-        >
-          Contact Me
-        </Link>
-      </li>
-      <li className="navbar-item">
-        <Link
-          to="projects"
-          smooth={true}
-          duration={800}
-          style={{ color: "white" }}
-        >
-          Projects
-        </Link>
-      </li>
-      <li className="navbar-item">
         <a
           href={CV}
           download="your-cv.pdf"
@@ -197,12 +176,6 @@ const Mywebdev = () => {
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode); // Toggle dark mode state
-  };
-
-  const scrollToProjects = () => {
-    if (projectsRef.current) {
-      projectsRef.current.scrollIntoView({ behavior: "smooth" });
-    }
   };
 
   return (

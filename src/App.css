@@ -210,6 +210,12 @@ body {
   opacity: 0.7; /* Set initial opacity to 0.2 (20%) */
   transition: opacity 0.5s, transform 0.5s; /* Add transitions for opacity and transform */
 }
+.person-info h3 {
+  font-style: italic;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 40px;
+  opacity: 50%;
+}
 .dark-mode-button:hover {
   opacity: 1; /* Increase opacity to 1 (100%) on hover */
   transform: scale(1); /* No need to change the scale property */

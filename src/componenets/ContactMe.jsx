@@ -2,6 +2,7 @@ import React from "react";
 import Git from "../assets/github.svg";
 import insta from "../assets/instagram.svg";
 import linked from "../assets/linkedin.svg";
+import "../App.css";
 
 const ContactMe = () => {
   return (

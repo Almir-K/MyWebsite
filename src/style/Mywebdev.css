@@ -120,7 +120,7 @@ body {
 /* //navbar// */
 .navbar {
   display: flex; /* Enable flex layout to arrange items horizontally */
-  justify-content: space-between; /* Spread items horizontally */
+  justify-content: center; /* Spread items horizontally */
   align-items: center; /* Vertically center items */
   flex-direction: row-reverse;
 }

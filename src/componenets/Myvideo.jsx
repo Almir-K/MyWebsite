@@ -1,11 +1,9 @@
 import React, { useEffect } from "react";
-import { Link as ReactRouterLink } from "react-router-dom";
-import { Link as ReactScrollLink } from "react-scroll"; // Import Link from react-scroll
-import VerticalSlider from "./VerticalSlider"; // Update the import path to match the actual path to your VerticalSlider component
-import "../style/Myvideo.css";
+import { Link as ReactRouterLink } from "react-router-dom"; // Import ReactRouterLink
+import VerticalSlider from "./VerticalSlider";
 import Connect from "../componenets/Connect";
 import { FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
-
+import "../style/Myvideo.css";
 const Myvideo = () => {
   useEffect(() => {
     const photos = document.querySelector(".photos");
@@ -70,14 +68,9 @@ const Myvideo = () => {
           <ReactRouterLink to="/videos" className="nav-link">
             VIDEOS {/* New "Videos" button */}
           </ReactRouterLink>
-          <ReactScrollLink
-            className="nav-link"
-            to="connect-details"
-            smooth={true}
-            duration={800}
-          >
+          <ReactRouterLink to="/connect-details" className="nav-link">
             CONNECT
-          </ReactScrollLink>
+          </ReactRouterLink>
         </div>
       </div>
       <div className="content">
