@@ -138,31 +138,31 @@ const VerticalSlider = () => {
             <img
               style={{ height: "150px" }}
               className="icons-canva"
-              src="../src/assets/canva.png"
+              src="./VideoPhotos/canva.png"
               alt="Photoshop"
             />
             <img
               style={{ height: "130px" }}
               className="icons-photoshop"
-              src="../src/assets/photoshop.png"
+              src="./VideoPhotos/photoshop.png"
               alt="Photoshop"
             />{" "}
             <img
               style={{ height: "130px" }}
               className="icons-lightroom"
-              src="../src/assets/lightroom.png"
+              src="./VideoPhotos/lightroom.png"
               alt="Lightroom"
             />{" "}
             <img
               style={{ height: "150px" }}
               className="icons-capcut"
-              src="../src/assets/capcut.png"
+              src="./VideoPhotos/capcut.png"
               alt="CapCut"
             />{" "}
             <img
               style={{ height: "150px" }}
               className="icon-adobe"
-              src="../src/assets/premierpro.png"
+              src="./VideoPhotos/premierpro.png"
               alt="phosotos"
             />
           </div>
